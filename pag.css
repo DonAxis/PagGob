@@ -1,0 +1,282 @@
+/* --- VARIABLES Y CONFIGURACIÓN BASE --- */
+:root {
+    --guinda: #9f2241;
+    --guinda-oscuro: #691c32;
+    --dorado: #bc955c;
+    --gris-fondo: #f4f4f4;
+    --blanco: #ffffff;
+    --borde: #dddddd;
+    --texto-gris: #666666;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body { 
+    font-family: Arial, Helvetica, sans-serif; 
+    background-color: var(--gris-fondo); 
+    color: #333; 
+    font-size: 16px; 
+    line-height: 1.6;
+}
+
+/* --- 1. HEADER (LOGOS, BUSCADOR Y UTILIDADES) --- */
+.main-header {
+    background: var(--blanco);
+    padding: 20px 0 10px 0;
+}
+
+.header-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    padding: 0 20px;
+}
+
+/* Lado Izquierdo: Logos y Buscador Principal */
+.header-left {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.logos-oficiales {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.logo-gob { height: 55px; }
+.logo-ssc { height: 50px; }
+.divisor-logo { width: 1px; height: 40px; background: #ccc; }
+
+.search-box-principal {
+    display: flex;
+    border: 1px solid #ccc;
+    width: 450px;
+    height: 38px;
+    border-left: 4px solid var(--dorado);
+}
+
+.search-box-principal input {
+    border: none;
+    flex: 1;
+    padding: 0 12px;
+    font-size: 16px;
+    outline: none;
+}
+
+.search-box-principal button {
+    background: #fff;
+    border: none;
+    padding: 0 15px;
+    cursor: pointer;
+    border-left: 1px solid #eee;
+}
+
+/* Lado Derecho: Breadcrumb y Enlaces */
+.header-right {
+    text-align: right;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    padding-bottom: 5px;
+}
+
+.breadcrumb-top {
+    font-size: 13px;
+    color: #999;
+}
+
+.breadcrumb-top a {
+    text-decoration: none;
+    color: #999;
+}
+
+.utility-nav {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.utility-nav a {
+    text-decoration: none;
+    color: var(--texto-gris);
+    font-size: 14px;
+    font-weight: bold;
+}
+
+/* --- 2. LÍNEA ROJA Y MENÚ GUINDA --- */
+.linea-decorativa {
+    height: 6px;
+    background-color: var(--guinda);
+    width: 100%;
+}
+
+.main-nav {
+    background-color: #fdfaf3; /* Fondo cremita suave */
+    border-bottom: 1px solid #e0d0b0;
+}
+
+.main-nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.main-nav a {
+    display: block;
+    padding: 15px 25px;
+    text-decoration: none;
+    color: var(--guinda);
+    font-weight: bold;
+    font-size: 16px;
+    border-right: 1px solid #e0d0b0;
+}
+
+/* --- 3. LAYOUT (SIDEBAR + CONTENIDO) --- */
+.main-container { 
+    max-width: 1100px; 
+    margin: 30px auto; 
+    display: flex; 
+    gap: 30px; 
+    padding: 0 20px;
+}
+
+.sidebar { 
+    width: 250px; 
+    background: var(--blanco); 
+    padding: 20px; 
+    height: fit-content; 
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.sidebar h3 { 
+    border-bottom: 3px solid var(--guinda); 
+    padding-bottom: 10px; 
+    margin-bottom: 15px;
+    font-size: 19px; 
+}
+
+.sidebar ul { list-style: none; }
+
+.sidebar li { 
+    padding: 12px 10px; 
+    border-bottom: 1px solid #eee; 
+    cursor: pointer; 
+    font-size: 16px;
+}
+
+.sidebar li.active { 
+    border-left: 5px solid var(--guinda); 
+    color: var(--guinda); 
+    font-weight: bold; 
+    background: #f9f9f9;
+}
+
+/* --- 4. CUADROS DE CONTENIDO --- */
+.content { flex: 1; }
+
+.content-header {
+    background: var(--blanco);
+    padding: 30px;
+    border: 1px solid var(--borde);
+    margin-bottom: 25px;
+}
+
+.content-header h1 { font-size: 28px; margin-bottom: 10px; }
+
+/* Cuadro de Filtros (Corregido alturas iguales) */
+.filter-box { 
+    background: var(--blanco); 
+    border: 1px solid var(--borde); 
+    margin-bottom: 25px; 
+}
+
+.filter-header { 
+    padding: 15px 25px; 
+    border-bottom: 1px solid #eee; 
+    background: #fcfcfc; 
+}
+
+.filter-body { 
+    padding: 25px; 
+    display: flex; 
+    gap: 25px; 
+}
+
+.filter-group { flex: 1; display: flex; flex-direction: column; gap: 8px; }
+
+.input-standard, .search-input-wrapper {
+    height: 42px; 
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.input-standard { width: 100%; padding: 0 10px; font-size: 15px; outline: none; }
+
+.search-input-wrapper { display: flex; overflow: hidden; background: #fff; }
+.search-input-wrapper input { border: none; flex: 1; padding: 0 12px; font-size: 15px; font-style: italic; outline: none; }
+
+.search-btn { 
+    border: none; 
+    border-left: 1px solid #ddd; 
+    background: #fff; 
+    padding: 0 15px; 
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+
+/* --- 5. TARJETAS --- */
+.card { 
+    background: var(--blanco); 
+    padding: 25px; 
+    display: flex; 
+    gap: 25px; 
+    margin-bottom: 25px; 
+    border: 1px solid var(--borde);
+}
+
+.card img { width: 150px; height: 180px; object-fit: cover; border: 1px solid #eee; }
+.card-info h2 { font-size: 19px; margin-bottom: 15px; border-bottom: 1px solid #eee; padding-bottom: 8px; }
+.info-row { font-size: 15px; margin-bottom: 10px; display: grid; grid-template-columns: 100px 1fr; }
+.label { font-weight: bold; color: #555; }
+
+/* --- 6. RESPONSIVIDAD (MÓVIL) --- */
+@media (max-width: 768px) {
+    .header-container { flex-direction: column; align-items: center; gap: 20px; }
+    .search-box-principal { width: 100%; }
+    .header-right { text-align: center; align-items: center; width: 100%; }
+    .utility-nav { flex-direction: row; gap: 15px; justify-content: center; }
+    
+    .main-nav ul { flex-wrap: nowrap; overflow-x: auto; justify-content: flex-start; }
+    .main-nav a { padding: 12px 15px; white-space: nowrap; }
+
+    .main-container { flex-direction: column; }
+    .sidebar { width: 100%; }
+    
+    .filter-body { flex-direction: column; }
+    
+    .card { flex-direction: column; align-items: center; text-align: center; }
+    .info-row { grid-template-columns: 1fr; }
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    top: 50; left: 10; width: 100%; height: 100%;
+    background-image: url('pagggg.png');
+    background-repeat: repeat;
+    background-size: 300px; /* Tamaño de cada repetición */
+    opacity: 0.1;
+    z-index: 9999;
+    pointer-events: none;
+}

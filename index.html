@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Directorio SSC</title>
+    <link rel="stylesheet" href="pag.css">
+</head>
+<body>
+
+
+ <header class="main-header">
+    <div class="header-container">
+        <div class="header-left">
+            <div class="logos-oficiales">
+                <img src="cdmx.png" alt="Gobierno CDMX" class="logo-gob">
+                <div class="divisor-logo"></div>
+                <img src="Sect.png" alt="SSC" class="logo-ssc">
+    
+
+            </div>
+            
+            <div class="search-box-principal">
+                <input type="text" placeholder="Buscar en el sitio">
+                <button class="alert-btn">
+                    <img src="https://img.icons8.com/ios-filled/50/000000/search.png" width="18">
+                </button>
+            </div>
+        </div>
+
+        <div class="header-right">
+            <div class="breadcrumb-top">
+                <a href="#" class="alert-btn">CDMX</a> / 
+                <a href="#" class="alert-btn">Secretarías</a> / 
+                <strong>SSC</strong>
+            </div>
+            <nav class="utility-nav">
+                <a href="#" class="alert-btn">Transparencia</a>
+                <a href="#" class="alert-btn">Atención Ciudadana</a>
+                <a href="#" class="alert-btn">Trámites y Servicios</a>
+            </nav>
+        </div>
+    </div>
+</header>
+
+
+
+<nav class="main-nav">
+    <ul>
+        <li><a href="#" class="alert-btn">Inicio</a></li>
+        <li><a href="#" class="alert-btn">Secretaría ▼</a></li>
+        <li><a href="#" class="alert-btn">Comunicación</a></li>
+        <li><a href="#" class="alert-btn">Reglamento de Tránsito</a></li>
+        <li><a href="#" class="alert-btn">Organización Policial ▼</a></li>
+    </ul>
+</nav>
+<div class="linea-decorativa"></div>
+
+    <div class="main-container">
+        
+        <aside class="sidebar">
+            <h3>Secretaría</h3>
+            <ul>
+                <li class="alert-btn">Acerca de</li>
+                <li class="active">Directorio</li>
+                <li class="alert-btn">Estructura Orgánica</li>
+                <li class="alert-btn">Marco Normativo</li>
+                <li class="alert-btn">Transparencia</li>
+                <li class="alert-btn">Contacto</li>
+            </ul>
+        </aside>
+
+       <main class="content">
+    <header class="content-header">
+        <h1>Directorio</h1>
+        <p>En esta sección encontrarás el listado de servidores públicos que conforman esta dependencia de la Ciudad de México, así como sus principales datos de contacto.</p>
+    </header>
+
+    <section class="filter-box">
+    <div class="filter-header">
+        <h3>Secretaría de Seguridad Ciudadana de la CDMX</h3>
+    </div>
+    <div class="filter-body">
+        <div class="filter-group">
+            <label>Por nivel</label>
+            <select class="alert-btn input-standard">
+                <option value="">Seleccionar</option>
+            </select>
+        </div>
+
+        <div class="filter-group">
+            <label>Por persona</label>
+            <div class="search-input-wrapper">
+                <input type="text" placeholder="Buscar" class="input-standard">
+                <button class="alert-btn search-btn">&#128269;</button>
+            </div>
+        </div>
+    </div>
+    </section>  
+
+    <section id="directory-list"></section>
+</main>
+    </div>
+
+    <script src="pag.js"></script>
+</body>
+</html>
