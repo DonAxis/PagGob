@@ -1,6 +1,6 @@
 const puestos = [
     {
-        imagen: "persona.png",
+        imagen: "persona1.png",
         puesto: "Secretaría de Seguridad Ciudadana de la CDMX",
         titular: "Comisario General Licenciado Pablo Vázquez Camacho",
         contacto: "pvazquez@ssc.cdmx.gob.mx",
@@ -8,7 +8,7 @@ const puestos = [
         direccion: "Calle Liverpool 136, Col. Juárez, C.P. 06600, Alcaldía Cuauhtémoc, CDMX"
     },
     {
-        imagen: "persona.png",
+        imagen: "persona1.png",
         puesto: "Subsecretaría de Inteligencia e Investigación Policial",
         titular: "Comisario Jefe Hermenegildo Lugo Lara",
         contacto: "hlugo@ssc.cdmx.gob.mx",
@@ -16,7 +16,7 @@ const puestos = [
         direccion: "Calle Liverpool 136, Col. Juárez, C.P. 06600, Alcaldía Cuauhtémoc, CDMX"
     },
     {
-        imagen: "persona.png",
+        imagen: "persona1.png",
         puesto: "Subsecretaría de Control de Tránsito",
         titular: "Comisario Cristian Raymundo Sumano Salazar",
         contacto: "—",
